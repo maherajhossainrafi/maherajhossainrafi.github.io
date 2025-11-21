@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign In to ISSUE TRACKER by MHR">
+    <title>Sign In - ISSUE TRACKER by MHR</title>
+    <link rel="stylesheet" href="itsignin.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header_content">
+            <h1>ISSUE TRACKER by MHR</h1>
+            <P>Sign in to manage and track issues efficiently.</P>
+        </div>
+    </header>
+    
+    <main>
+
+        <section class="itsignin">
+
+            <div class="container">
+
+                <form action="itsignin.php" method="post">
+
+                    <fieldset>
+                        <legend>Account Information</legend>
+
+                        <div class="form">
+                            <label for="username">Username or Email:<span class="required">*</span></label>
+                            <input 
+                                type="text"
+                                id="username"
+                                name="username"
+                                placeholder="Enter your username or email"
+                                required
+                                aria-describedby="username_error"
+                            >
+                            <span class="error" id="username_error" role="alert"></span>
+                        </div>
+
+                        <div class="form">
+                            <label for="password">Password:<span class="required">*</span></label>
+                            <input 
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                required
+                                aria-describedby="password_error"
+                            >
+                            <span class="error" id="password_error" role="alert"></span>
+                        </div>
+
+                        <div class="form-checkbox-terms">
+                            <input
+                                type="checkbox"
+                                id="remember"
+                                name="remember"
+                            >
+                            <label for="remember">Remember me</label>
+                        </div>
+
+                        <button type="submit" class="button">SIGN IN</button>
+
+                        <div class="forgot-password">
+                            <a href="itforgotpassword.html">Forgot your password?</a>
+                        </div>
+
+                    </fieldset>
+
+                </form>
+
+                <p>Don't have an account? <a href="itsignup.html">SIGN UP!</a></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer_content">
+            <p>&copy; 2025 ISSUE TRACKER by MHR. All rights reserved.</p>
+            <nav class="footer_nav">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
