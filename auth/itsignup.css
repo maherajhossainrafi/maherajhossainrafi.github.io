@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    flex: 1;
+    display: flex;
+    min-height: 100vh;
+}
+
+.itsignup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.branding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px 25px 40px;
+    gap: 0;
+    background-color: #ffffff;
+}
+
+.logo-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.main-logo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.1;
+    margin: 0;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.creator-tag {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+    color: #000000;
+    margin: 1px 0 0 0;
+    align-self: flex-end;
+    padding-right: 4px;
+}
+
+.tagline {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    line-height: 1.2;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 40px 15px 40px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+
+.form-box {
+    width: 100%;
+    max-width: 800px;
+    padding: 15px 25px;
+    border: 1.5px solid #000000;
+    border-radius: 6px;
+    background-color: #ffffff;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin: 0 auto;
+}
+
+.form-box:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+}
+
+.form-box:focus-within {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-1px);
+}
+
+form {
+    width: 100%;
+}
+
+fieldset {
+    border: none;
+    width: 100%;
+}
+
+legend {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.form-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    margin-bottom: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 3px;
+    color: #000000;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.required {
+    color: #ff0000;
+    margin-left: 1px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 5px 8px;
+    border: 1.5px solid #d0d0d0;
+    border-radius: 4px;
+    font-size: 11px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+    border-color: #b0b0b0;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #999999;
+}
+
+.radio_group {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-top: 4px;
+    align-items: center;
+}
+
+.radio_option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+}
+
+.radio_option > input[type="radio"] {
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    accent-color: #000000;
+}
+
+.radio_option > label {
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.conditional {
+    margin-top: 6px;
+    padding: 6px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+    padding: 0 6px;
+    margin-top: 0;
+}
+
+#role_user:checked ~ .conditional {
+    max-height: 100px;
+    opacity: 1;
+    padding: 6px;
+    margin-top: 6px;
+}
+
+.form-checkbox-terms-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 6px 0 4px 0;
+    width: 100%;
+}
+
+.form-checkbox-terms {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    justify-content: center;
+    width: 100%;
+}
+
+input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    accent-color: #000000;
+    margin-top: 1px;
+    flex-shrink: 0;
+}
+
+.form-checkbox-terms label {
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.form-checkbox-terms a {
+    color: #1a73e8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-checkbox-terms a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+.button {
+    width: 100%;
+    padding: 6px 16px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 0;
+    grid-column: 1 / -1;
+}
+
+.button:hover {
+    background-color: #2a2a2a;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 11px;
+    width: 100%;
+    color: #000000;
+}
+
+.signup-link a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #1b5e20;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.error {
+    display: block;
+    color: #ff0000;
+    font-size: 10px;
+    margin-top: 2px;
+    min-height: 12px;
+    text-align: center;
+    width: 100%;
+}
+
+footer {
+    background-color: #f5f5f5;
+    padding: 8px 40px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer_content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer_content p {
+    font-size: 11px;
+    color: #666666;
+}
+
+.footer_nav {
+    display: flex;
+    gap: 12px;
+}
+
+.footer_nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 11px;
+    transition: color 0.3s ease;
+}
+
+.footer_nav a:hover {
+    color: #666666;
+    cursor: pointer;
+}
+
+@media (max-width: 968px) {
+    .branding {
+        padding: 15px 30px 20px 30px;
+    }
+    
+    .main-logo {
+        font-size: 28px;
+    }
+    
+    .tagline {
+        font-size: 12px;
+    }
+    
+    .container {
+        padding: 12px 30px 12px 30px;
+    }
+
+    .form-box {
+        padding: 12px 20px;
+        max-width: 700px;
+    }
+    
+    .form-columns {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-columns {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    
+    .form-box {
+        padding: 10px 15px;
+    }
+    
+    .footer_content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer_nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    footer {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .branding {
+        padding: 12px 20px 15px 20px;
+    }
+    
+    .main-logo {
+        font-size: 24px;
+    }
+    
+    .creator-tag {
+        font-size: 11px;
+    }
+    
+    .tagline {
+        font-size: 11px;
+    }
+    
+    .container {
+        padding: 10px 15px 10px 15px;
+    }
+    
+    .form-box {
+        max-width: 100%;
+        padding: 8px 12px;
+    }
+    
+    legend {
+        font-size: 14px;
+    }
+    
+    .form-checkbox-terms {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+}
+
+.container {
+    overflow: visible !important;
+}
+
+main {
+    overflow: visible !important;
+}
+
+.itsignup {
+    overflow: visible !important;
+}

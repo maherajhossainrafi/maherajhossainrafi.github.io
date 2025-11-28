@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign Up for ISSUE TRACKER by MHR">
+    <title>Sign Up - ISSUE TRACKER by MHR</title>
+    <link rel="stylesheet" href="itsignup.css">
+</head>
+
+<body>
+
+    <main>
+
+        <section class="itsignup">
+
+            <div class="branding">
+                <div class="logo-group">
+                    <h1 class="main-logo">ISSUE TRACKER</h1>
+                    <p class="creator-tag">by MHR</p>
+                </div>
+                <p class="tagline">ISSUE TRACKER helps you to track & manage issues efficiently.</p>
+            </div>
+
+            <div class="container">
+
+                <div class="form-box">
+                    <form action="itsignup.php" method="post">
+
+                        <fieldset>
+                            <legend>Sign Up</legend>
+                            
+                            <div class="form-columns">
+
+                                <div class="left-column">
+                                    <div class="form">
+                                        <label for="name">Name:</label>
+                                        <input 
+                                            type="text" 
+                                            id="name"
+                                            name="name"
+                                            placeholder="Enter your full name"
+                                            aria-describedby="name_error"
+                                        >
+                                        <span class="error" id="name_error" role="alert"></span>
+                                    </div>
+
+                                    <div class="form">
+                                        <label for="organization">Organization:</label>
+                                        <input 
+                                            type="text"
+                                            id="organization"
+                                            name="organization"
+                                            placeholder="Enter your company or institution"
+                                            aria-describedby="organization_error"
+                                        >
+                                        <span class="error" id="organization_error" role="alert"></span>
+                                    </div>
+
+                                    <div class="form">
+                                        <label>Role:<span class="required">*</span></label>
+
+                                        <div class="radio_group">
+                                            <div class="radio_option">
+                                                <input 
+                                                    type="radio"
+                                                    id="role_admin"
+                                                    name="role"
+                                                    value="admin"
+                                                    required
+                                                >
+                                                <label for="role_admin">Admin</label>
+                                            </div>
+
+                                            <div class="radio_option">
+                                                <input 
+                                                    type="radio"
+                                                    id="role_user"
+                                                    name="role"
+                                                    value="user"
+                                                    required
+                                                >
+                                                <label for="role_user">User</label>
+                                                
+                                                <div class="conditional">
+                                                    <label for="user_rolespecify">Specify Role:<span class="required">*</span></label>
+                                                    <input
+                                                        type="text"
+                                                        id="user_rolespecify"
+                                                        name="user_rolespecify"
+                                                        placeholder="Enter your role (e.g., Developer, Tester)"
+                                                        aria-describedby="role_error"
+                                                    >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="error" id="role_error" role="alert"></span>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="right-column">
+                                    <div class="form">
+                                        <label for="email">Email:<span class="required">*</span></label>
+                                        <input 
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            placeholder="Enter your email"
+                                            required
+                                            aria-describedby="email_error"
+                                        >
+                                        <span class="error" id="email_error" role="alert"></span>
+                                    </div>
+
+                                    <div class="form">
+                                        <label for="username">Username:<span class="required">*</span></label>
+                                        <input 
+                                            type="text"
+                                            id="username"
+                                            name="username"
+                                            placeholder="Enter a unique username"
+                                            required
+                                            minlength="4"
+                                            maxlength="20"
+                                            pattern="[a-zA-Z0-9_]+"
+                                            title="Username can only contain letters, numbers, and underscores"
+                                            aria-describedby="username_error"
+                                        >
+                                        <span class="error" id="username_error" role="alert"></span>
+                                    </div>
+
+                                    <div class="form">
+                                        <label for="password">Password:<span class="required">*</span></label>
+                                        <input 
+                                            type="password"
+                                            id="password"
+                                            name="password"
+                                            placeholder="Create a strong password"
+                                            required 
+                                            minlength="8"
+                                            aria-describedby="password_error"
+                                        >
+                                        <span class="error" id="password_error" role="alert"></span>
+                                    </div>
+
+                                    <div class="form">
+                                        <label for="confirm_password">Confirm Password:<span class="required">*</span></label>
+                                        <input 
+                                            type="password"
+                                            id="confirm_password"
+                                            name="confirm_password"
+                                            placeholder="Re-enter your password"
+                                            required 
+                                            minlength="8"
+                                            aria-describedby="confirm_password_error"
+                                        >
+                                        <span class="error" id="confirm_password_error" role="alert"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-checkbox-terms-wrapper">
+                                <div class="form-checkbox-terms">
+                                    <input
+                                        type="checkbox"
+                                        id="terms"
+                                        name="terms"
+                                        required
+                                        aria-describedby="terms_error"
+                                    >
+                                    <label for="terms">I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a><span class="required">*</span></label>
+                                </div>
+                                <span class="error" id="terms_error" role="alert"></span>
+                            </div>
+
+                            <button type="submit" class="button">SIGN UP</button>
+
+                        </fieldset>
+
+                    </form>
+
+                    <p class="signup-link">Already have an account? <a href="itsignin.html">SIGN IN!</a></p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer_content">
+            <p>&copy; 2025 ISSUE TRACKER by MHR. All rights reserved.</p>
+            <nav class="footer_nav">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
