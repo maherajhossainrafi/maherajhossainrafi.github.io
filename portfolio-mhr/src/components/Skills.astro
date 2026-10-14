@@ -1,0 +1,21 @@
+---
+import skills from '../data/skills.json';
+import Chip from './Chip.astro';
+---
+<section class="section" id="skills" aria-labelledby="skills-title">
+  <div class="wrap">
+    <header class="section__head"><h2 id="skills-title">Skills</h2><p class="mono">{skills.note}</p></header>
+    <dl class="skills">
+      {skills.groups.map((g) => (
+        <div class="skills__row">
+          <dt class="mono">{g.title}</dt>
+          <dd>
+            <ul class="chips">
+              {g.items.map((i) => <Chip tech={i.tech} status={(i as any).status} note={(i as any).note} />)}
+            </ul>
+          </dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+</section>

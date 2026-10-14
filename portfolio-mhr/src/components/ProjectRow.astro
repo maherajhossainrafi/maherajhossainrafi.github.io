@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+import Chip from './Chip.astro';
+import Ui from './Ui.astro';
+import type { Project } from '../lib/data';
+interface Props { project: Project; index: number }
+const { project: p, index } = Astro.props;
+const n = String(index).padStart(2, '0');
+---
+<li class="project tl-item" id={`project-${p.slug}`} data-project={p.slug} data-has-media={p.media ? '' : undefined}>
+  <span class="project__num mono" aria-hidden="true">{n}</span>
+  <div class="project__body">
+    <h4 class="project__name">{p.name}{p.featured && <span class="project__flag mono">Featured</span>}</h4>
+    <p class="project__kind mono">{p.kind}</p>
+    <p class="project__summary">{p.summary}</p>
+    <ul class="chips" aria-label={`Technologies used in ${p.shortName}`}>
+      {p.stack.map((t) => <Chip tech={t} />)}
+    </ul>
+    {p.links.length > 0 && (
+      <ul class="project__links">
+        {p.links.map((l) => (
+          <li><a class="text-link" href={l.url} rel="noopener noreferrer" target="_blank">{l.label}<Ui name="external" /><span class="visually-hidden"> (opens in a new tab)</span></a></li>
+        ))}
+      </ul>
+    )}
+  </div>
+  {p.media && (
+    <div class="project__media">
+      <Image src={p.media.src} alt={p.media.alt} width={640} loading="lazy" widths={[320, 640]} sizes="(min-width: 900px) 320px, 100vw" />
+    </div>
+  )}
+</li>

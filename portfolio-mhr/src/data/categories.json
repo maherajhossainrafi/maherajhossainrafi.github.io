@@ -1,0 +1,5 @@
+[
+  { "id": "web", "label": "Web applications", "short": "Web" },
+  { "id": "embedded", "label": "Microcontroller & sensor systems", "short": "Embedded" },
+  { "id": "console", "label": "Console applications", "short": "Console" }
+]

@@ -1,0 +1,22 @@
+{
+  "name": "Maheraj Hossain Rafi",
+  "shortName": "MHR",
+  "title": "CSE Undergraduate",
+  "tagline": "Building · Learning · Sharing",
+  "description": "CSE Undergrad | C, C++, C#, JS, PHP, MySQL | DSA & Problem Solving | Building Full-Stack Projects | Exploring AI & System Design",
+  "url": "https://maherajhossainrafi.github.io",
+  "base": "/",
+  "location": "Dhaka, Bangladesh",
+  "email": "mdmhrofficial@gmail.com",
+  "github": "https://github.com/maherajhossainrafi",
+  "linkedin": "https://www.linkedin.com/in/maherajhossainrafi",
+  "resume": {
+    "file": "resume/Maheraj-Hossain-Rafi-Resume.pdf",
+    "label": "Download resume"
+  },
+  "bio": "I build full-stack web applications and microcontroller-based systems while exploring AI, machine learning, and system design.",
+  "headline": "CSE Undergrad | C, C++, C#, JS, PHP, MySQL | DSA & Problem Solving | Building Full-Stack Projects | Exploring AI & System Design",
+  "utc": "UTC+6",
+  "availability": "Open to work",
+  "leetcode": "https://github.com/maherajhossainrafi/leetcode-solutions"
+}

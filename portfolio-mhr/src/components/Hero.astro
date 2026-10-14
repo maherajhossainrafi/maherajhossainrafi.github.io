@@ -1,0 +1,49 @@
+---
+import site from '../data/site.json';
+import profile from '../data/profile.json';
+import Portrait from './Portrait.astro';
+import TechRow from './TechRow.astro';
+import Ui from './Ui.astro';
+import Brand from './Brand.astro';
+import type { Project } from '../lib/data';
+interface Props { projects: Project[] }
+const { projects } = Astro.props;
+const { education: edu } = profile;
+const resume = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${site.resume.file}`;
+---
+<section class="hero" id="top" aria-labelledby="hero-name">
+  <div class="hero__band">
+    <div class="wrap profile">
+      <Portrait />
+      <div class="identity__text">
+        <div>
+          <h1 class="identity__name" id="hero-name">{site.name}</h1>
+          <p class="identity__title">{site.title}</p>
+        </div>
+        <p class="identity__tagline">{site.tagline}</p>
+      </div>
+      <ul class="profile__links">
+        <li><a class="plink plink--primary" href={`mailto:${site.email}`}><span class="plink__icon"><Ui name="mail" /></span><span>Email me</span></a></li>
+        <li><a class="plink" href={resume} download><span class="plink__icon"><Ui name="download" /></span><span>Download resume</span></a></li>
+        <li><a class="plink" href={site.github} rel="noopener noreferrer" target="_blank"><span class="plink__icon"><Brand name="siGithub" /></span><span>GitHub<span class="visually-hidden"> (opens in a new tab)</span></span></a></li>
+        {site.linkedin && <li><a class="plink" href={site.linkedin} rel="noopener noreferrer" target="_blank"><span class="plink__icon"><Brand name="siLinkedin" /></span><span>LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></span></a></li>}
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap hero__body">
+    <p class="hero__bio">{site.bio}</p>
+    <ul class="status">
+      <li><span class="status__dot" aria-hidden="true"></span>{site.availability}</li>
+      <li><Ui name="pin" />{site.location} ({site.utc})</li>
+    </ul>
+    <TechRow />
+    <dl class="stats" aria-label="Profile summary">
+      <div class="stat"><dt class="mono">Projects</dt><dd class="stat__num">{projects.length}</dd></div>
+      {profile.summary.counts.map((c) => (
+        <div class="stat"><dt class="mono">{c.label}</dt><dd class="stat__num">{c.items.length}</dd></div>
+      ))}
+      <div class="stat stat--wide"><dt class="mono">Education</dt><dd class="stat__text">B.Sc. in CSE, IUBAT <span class="stat__muted">(CGPA: {edu.cgpa} / {edu.cgpaScale})</span></dd></div>
+    </dl>
+  </div>
+</section>

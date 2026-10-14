@@ -1,0 +1,15 @@
+{
+  "name": "Smart Hospital Patient Management System",
+  "shortName": "Hospital System",
+  "category": "console",
+  "kind": "Console application",
+  "order": 8,
+  "summary": "Manages admissions, emergency prioritization, dynamic patient records, fast search, undo/redo, and sorting, built on linked lists, queues, trees, and stacks.",
+  "stack": [
+    "cpp",
+    "codeblocks",
+    "vscode"
+  ],
+  "links": [],
+  "resume": "Admissions, emergency prioritization, search, undo/redo and sorting built on linked lists, queues, trees and stacks."
+}

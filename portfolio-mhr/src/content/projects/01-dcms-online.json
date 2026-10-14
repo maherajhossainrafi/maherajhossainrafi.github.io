@@ -1,0 +1,21 @@
+{
+  "name": "Dental Care Management System (DCMS), online edition",
+  "shortName": "DCMS online",
+  "category": "web",
+  "kind": "Website + web application",
+  "order": 1,
+  "featured": true,
+  "summary": "A bilingual (Bangla and English) dental clinic management system with role-based access, conflict-free appointment scheduling, billing and printable invoices, consent management, and guest entry for patients to remotely submit intake details or appointment requests.",
+  "stack": [
+    "html",
+    "tailwind",
+    "react",
+    "django",
+    "javascript",
+    "typescript",
+    "python",
+    "postgresql"
+  ],
+  "links": [],
+  "resume": "Built a bilingual (Bangla and English) clinic system with role-based access, conflict-free scheduling, billing, printable invoices, consent management and online guest entry for appointment requests."
+}

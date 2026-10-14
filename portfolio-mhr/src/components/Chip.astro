@@ -1,0 +1,14 @@
+---
+import { techFor } from '../lib/data';
+import { brand } from '../lib/icons';
+import Brand from './Brand.astro';
+interface Props { tech: string; status?: string; note?: string }
+const { tech, status, note } = Astro.props;
+const t = techFor(tech);
+---
+<li class="chip" data-learning={status === 'learning' ? '' : undefined}>
+  {brand(t.icon) && <Brand name={t.icon} />}
+  <span>{t.label}</span>
+  {status === 'learning' && <span class="chip__tag chip__tag--learning">learning</span>}
+  {note && <span class="chip__tag">{note}</span>}
+</li>

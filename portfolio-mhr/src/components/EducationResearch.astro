@@ -1,0 +1,35 @@
+---
+import profile from '../data/profile.json';
+const { education: e, research: r } = profile;
+---
+<section class="section" id="education" aria-labelledby="education-title">
+  <div class="wrap">
+    <header class="section__head"><h2 id="education-title">Education &amp; Research</h2><p class="mono">{e.period}</p></header>
+
+    <div class="tl education-tl"><div class="education tl-item" role="group" aria-label="Education">
+      <h3 class="education__degree">{e.degree}</h3>
+      <p class="education__school">{e.institution}</p>
+      <p class="education__cgpa"><span class="mono">CGPA</span> <strong>{e.cgpa}</strong> / {e.cgpaScale}</p>
+    </div></div>
+
+    <div class="research">
+      <h3 class="group__title mono">Research<span>{r.papers.length}</span></h3>
+      <p class="research__note">{r.status}</p>
+      <ul class="papers">
+        {r.papers.map((p) => (
+          <li class="paper">
+            <div>
+              <h4 class="paper__title">{p.title}</h4>
+              <p class="paper__method mono">{p.method}</p>
+            </div>
+            <span class="badge mono">{p.status}</span>
+          </li>
+        ))}
+      </ul>
+      <p class="research__interests-label mono">Research interests</p>
+      <ul class="chips chips--plain">
+        {r.interests.map((i) => <li class="chip"><span>{i}</span></li>)}
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+---
+import site from '../data/site.json';
+import Ui from './Ui.astro';
+import Brand from './Brand.astro';
+const hasEmail = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(site.email);
+---
+<aside class="rail rail--left" aria-label="Social links">
+  <ul>
+    <li><a href={site.github} rel="noopener noreferrer" target="_blank" aria-label="GitHub profile (opens in a new tab)"><Brand name="siGithub" /></a></li>
+    {site.linkedin && <li><a href={site.linkedin} rel="noopener noreferrer" target="_blank" aria-label="LinkedIn profile (opens in a new tab)"><Brand name="siLinkedin" /></a></li>}
+    <li><a href={`mailto:${site.email}`} aria-label="Send an email"><Ui name="mail" /></a></li>
+  </ul>
+</aside>
+{hasEmail && <aside class="rail rail--right"><a class="mono" href={`mailto:${site.email}`}>{site.email}</a></aside>}

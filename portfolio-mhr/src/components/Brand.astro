@@ -1,0 +1,11 @@
+---
+import { brand } from '../lib/icons';
+interface Props { name?: string; class?: string }
+const { name, class: cls } = Astro.props;
+const glyph = brand(name);
+---
+{glyph && (
+  <svg class:list={['icon', cls]} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+    <path d={glyph.path} />
+  </svg>
+)}

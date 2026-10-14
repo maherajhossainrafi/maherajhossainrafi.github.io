@@ -1,0 +1,146 @@
+{
+  "c": {
+    "label": "C",
+    "icon": "siC"
+  },
+  "cpp": {
+    "label": "C++",
+    "icon": "siCplusplus"
+  },
+  "php": {
+    "label": "PHP",
+    "icon": "siPhp"
+  },
+  "javascript": {
+    "label": "JavaScript",
+    "icon": "siJavascript"
+  },
+  "typescript": {
+    "label": "TypeScript",
+    "icon": "siTypescript"
+  },
+  "python": {
+    "label": "Python",
+    "icon": "siPython"
+  },
+  "html": {
+    "label": "HTML",
+    "icon": "siHtml5"
+  },
+  "css": {
+    "label": "CSS",
+    "icon": "siCss"
+  },
+  "tailwind": {
+    "label": "Tailwind CSS",
+    "icon": "siTailwindcss"
+  },
+  "react": {
+    "label": "React",
+    "icon": "siReact"
+  },
+  "django": {
+    "label": "Django",
+    "icon": "siDjango"
+  },
+  "mysql": {
+    "label": "MySQL",
+    "icon": "siMysql"
+  },
+  "postgresql": {
+    "label": "PostgreSQL",
+    "icon": "siPostgresql"
+  },
+  "xampp": {
+    "label": "XAMPP",
+    "icon": "siXampp"
+  },
+  "codeblocks": {
+    "label": "Code::Blocks",
+    "icon": "siCodeblocks"
+  },
+  "vscode": {
+    "label": "VS Code",
+    "icon": "siVisualstudiocode"
+  },
+  "arduino": {
+    "label": "Arduino IDE",
+    "icon": "siArduino"
+  },
+  "esp": {
+    "label": "ESP",
+    "icon": "siEspressif"
+  },
+  "github": {
+    "label": "GitHub",
+    "icon": "siGithub"
+  },
+  "leetcode": {
+    "label": "LeetCode",
+    "icon": "siLeetcode"
+  },
+  "rfid": {
+    "label": "RFID"
+  },
+  "nfc": {
+    "label": "NFC smart cards"
+  },
+  "gas-sensor": {
+    "label": "Gas sensor"
+  },
+  "flame-sensor": {
+    "label": "Flame sensor"
+  },
+  "indicators": {
+    "label": "Indicators"
+  },
+  "dsa": {
+    "label": "Data structures & algorithms"
+  },
+  "problem-solving": {
+    "label": "Problem solving",
+    "icon": "siLeetcode"
+  },
+  "oop": {
+    "label": "Object-oriented programming"
+  },
+  "ml": {
+    "label": "Machine learning"
+  },
+  "dl": {
+    "label": "Deep learning"
+  },
+  "csharp": {
+    "label": "C#"
+  },
+  "cs-foundations": {
+    "label": "Computer Science Foundations"
+  },
+  "programming": {
+    "label": "Programming"
+  },
+  "data-structures": {
+    "label": "Data Structures"
+  },
+  "algorithms": {
+    "label": "Algorithms"
+  },
+  "coa": {
+    "label": "Computer Organization & Architecture"
+  },
+  "os": {
+    "label": "Operating Systems"
+  },
+  "dbms": {
+    "label": "Database Management Systems"
+  },
+  "datacomm": {
+    "label": "Data Communications"
+  },
+  "sad": {
+    "label": "System Analysis & Design"
+  },
+  "data-science": {
+    "label": "Data Science"
+  }
+}

@@ -1,0 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import site from '../data/site.json';
+// Optional: drop a square photo at src/assets/portrait.jpg (or .png / .webp / .jpeg).
+const found = import.meta.glob<{ default: ImageMetadata }>('../assets/portrait.{jpg,jpeg,png,webp}', { eager: true });
+const photo = Object.values(found)[0]?.default;
+---
+<div class="portrait">
+  {photo
+    ? <Image src={photo} alt={`Portrait of ${site.name}`} width={288} height={288} loading="eager" densities={[1, 2]} />
+    : <span class="portrait__mark mono" aria-hidden="true">{site.shortName}</span>}
+</div>

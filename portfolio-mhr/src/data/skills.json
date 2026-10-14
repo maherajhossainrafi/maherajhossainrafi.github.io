@@ -1,0 +1,150 @@
+{
+  "note": "“Learning” marks technologies I am still building depth in.",
+  "groups": [
+    {
+      "title": "Languages",
+      "items": [
+        {
+          "tech": "c"
+        },
+        {
+          "tech": "cpp"
+        },
+        {
+          "tech": "csharp"
+        },
+        {
+          "tech": "php"
+        },
+        {
+          "tech": "javascript",
+          "status": "learning"
+        },
+        {
+          "tech": "python",
+          "status": "learning"
+        }
+      ]
+    },
+    {
+      "title": "Frontend",
+      "items": [
+        {
+          "tech": "html"
+        },
+        {
+          "tech": "css"
+        },
+        {
+          "tech": "tailwind"
+        },
+        {
+          "tech": "typescript"
+        },
+        {
+          "tech": "react",
+          "status": "learning"
+        }
+      ]
+    },
+    {
+      "title": "Backend",
+      "items": [
+        {
+          "tech": "php"
+        },
+        {
+          "tech": "django",
+          "status": "learning"
+        }
+      ]
+    },
+    {
+      "title": "Databases",
+      "items": [
+        {
+          "tech": "mysql"
+        },
+        {
+          "tech": "postgresql",
+          "status": "learning"
+        }
+      ]
+    },
+    {
+      "title": "Embedded & hardware",
+      "items": [
+        {
+          "tech": "esp"
+        },
+        {
+          "tech": "rfid"
+        },
+        {
+          "tech": "nfc"
+        },
+        {
+          "tech": "gas-sensor"
+        },
+        {
+          "tech": "flame-sensor"
+        },
+        {
+          "tech": "indicators"
+        }
+      ]
+    },
+    {
+      "title": "Development tools",
+      "items": [
+        {
+          "tech": "vscode"
+        },
+        {
+          "tech": "codeblocks"
+        },
+        {
+          "tech": "arduino"
+        },
+        {
+          "tech": "github"
+        },
+        {
+          "tech": "xampp"
+        }
+      ]
+    },
+    {
+      "title": "Computer Science Foundations",
+      "items": [
+        {
+          "tech": "programming"
+        },
+        {
+          "tech": "data-structures"
+        },
+        {
+          "tech": "algorithms"
+        },
+        {
+          "tech": "coa"
+        },
+        {
+          "tech": "os"
+        },
+        {
+          "tech": "dbms"
+        },
+        {
+          "tech": "datacomm"
+        },
+        {
+          "tech": "sad"
+        },
+        {
+          "tech": "data-science"
+        }
+      ]
+    }
+  ]
+}

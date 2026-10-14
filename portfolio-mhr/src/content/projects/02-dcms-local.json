@@ -1,0 +1,17 @@
+{
+  "name": "Dental Care Management System (DCMS), local edition",
+  "shortName": "DCMS local",
+  "category": "web",
+  "kind": "Web application",
+  "order": 2,
+  "summary": "An offline, single-machine edition of DCMS with bilingual (Bangla and English) support, role-based access, conflict-free scheduling, billing and printable invoices, and consent management, without online guest entry.",
+  "stack": [
+    "html",
+    "css",
+    "php",
+    "mysql",
+    "xampp"
+  ],
+  "links": [],
+  "resume": "Offline single-machine edition of DCMS with the same bilingual, role-based scheduling, billing and consent workflows."
+}

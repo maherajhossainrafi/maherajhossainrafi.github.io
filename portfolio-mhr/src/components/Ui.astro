@@ -1,0 +1,6 @@
+---
+import { ui } from '../lib/icons';
+interface Props { name: keyof typeof ui; class?: string }
+const { name, class: cls } = Astro.props;
+---
+<span class:list={['icon', cls]} set:html={ui[name]} />

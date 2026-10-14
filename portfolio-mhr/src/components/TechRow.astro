@@ -1,0 +1,17 @@
+---
+import profile from '../data/profile.json';
+import { techFor } from '../lib/data';
+import { brand } from '../lib/icons';
+import Brand from './Brand.astro';
+// Icons shown in the hero. Edit the list in src/data/profile.json ("summary.iconRow").
+// Technologies without an official mark (such as C#) are shown as a plain text tile, never a made-up logo.
+const items = profile.summary.iconRow.map((k) => ({ key: k, ...techFor(k) }));
+---
+<ul class="techrow" aria-label="Technologies">
+  {items.map((t) => (
+    <li title={t.label}>
+      {brand(t.icon) ? <Brand name={t.icon} /> : <span class="techrow__text mono" aria-hidden="true">{t.label}</span>}
+      <span class="visually-hidden">{t.label}</span>
+    </li>
+  ))}
+</ul>

@@ -1,0 +1,21 @@
+---
+import profile from '../data/profile.json';
+import site from '../data/site.json';
+import Brand from './Brand.astro';
+const a = profile.about;
+---
+<section class="section section--joined" id="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <header class="section__head"><h2 id="about-title">About</h2><p class="mono">Building · Learning · Sharing</p></header>
+    <div class="about">
+      <div class="about__text">
+        {a.paragraphs.map((p) => <p>{p}</p>)}
+      </div>
+      <div class="about__side">
+        <p class="mono about__label">Currently exploring</p>
+        <ul class="chips chips--plain">{a.exploring.map((x) => <li class="chip"><span>{x}</span></li>)}</ul>
+        <p class="about__link"><a class="badge-link" href={site.leetcode} rel="noopener noreferrer" target="_blank"><Brand name="siLeetcode" />LeetCode solutions<span class="visually-hidden"> on GitHub (opens in a new tab)</span></a></p>
+      </div>
+    </div>
+  </div>
+</section>

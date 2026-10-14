@@ -1,0 +1,69 @@
+/* tokens.css: the only file with raw values. Light neutrals plus one muted navy accent. */
+:root {
+  color-scheme: light dark;
+
+  --font-sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* Light theme (default): white, gray, black. Highlights: blue, green, yellow, red. Nothing else. */
+  --bg: #fafafa;
+  --surface: #f0f0f0;
+  --surface-raised: #ffffff;
+  --border: #dcdcdc;
+  --border-strong: #b5b5b5;
+  --text: #111111;
+  --text-muted: #55595f;
+  --accent: #1a56db;           /* blue */
+  --accent-strong: #1241a8;
+  --accent-contrast: #ffffff;
+  --accent-tint: #e5edfc;
+  --focus: #1a56db;
+  --blue: #1a56db; --green: #1e9d52; --yellow: #d79a00; --red: #d93025;
+
+  /* Type scale */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+
+  /* Spacing scale: every margin and gap uses these */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px; --s-6: 32px; --s-7: 48px; --s-8: 64px; --s-9: 96px;
+
+  --radius: 6px;
+  --wrap: 1120px;
+  --gutter: 24px;
+  --section-y: var(--s-7);
+
+  --portrait: 136px;      /* hero portrait; the name block is exactly this tall */
+  --duration: 150ms;
+  --rule: 2px;            /* contrast rule weight (accent / strong lines) */
+  --fade: 280ms;
+}
+
+@media (max-width: 719px) {
+  :root { --gutter: 16px; --section-y: var(--s-6); --portrait: 88px; }
+}
+
+/* Dark theme: follows the OS unless the visitor picked one with the toggle. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a0a0a; --surface: #141414; --surface-raised: #141414;
+    --border: #262626; --border-strong: #404040;
+    --text: #ececec; --text-muted: #a3a3a3;
+    --accent: #5b9dff; --accent-strong: #8dbbff; --accent-contrast: #08111f; --accent-tint: #14233d;
+    --focus: #5b9dff;
+    --blue: #5b9dff; --green: #3fb950; --yellow: #e3b341; --red: #f85149;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0a0a0a; --surface: #141414; --surface-raised: #141414;
+  --border: #262626; --border-strong: #404040;
+  --text: #ececec; --text-muted: #a3a3a3;
+  --accent: #5b9dff; --accent-strong: #8dbbff; --accent-contrast: #08111f; --accent-tint: #14233d;
+  --focus: #5b9dff;
+  --blue: #5b9dff; --green: #3fb950; --yellow: #e3b341; --red: #f85149;
+}
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }

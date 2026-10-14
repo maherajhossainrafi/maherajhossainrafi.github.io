@@ -1,0 +1,15 @@
+{
+  "name": "Smart Irrigation System",
+  "shortName": "Irrigation",
+  "category": "console",
+  "kind": "Console application",
+  "order": 7,
+  "summary": "A modular, OOP-based C++ system that simulates soil-moisture monitoring and automatic water flow control, with safety safeguards, operation logging, and a manual emergency override.",
+  "stack": [
+    "cpp",
+    "codeblocks",
+    "vscode"
+  ],
+  "links": [],
+  "resume": "Modular, object-oriented C++ simulation of soil-moisture monitoring and automatic water flow with safeguards, logging and manual override."
+}

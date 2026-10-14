@@ -1,0 +1,15 @@
+{
+  "name": "Traffic Flow Simulation (TFS)",
+  "shortName": "Traffic Flow",
+  "category": "console",
+  "kind": "Console application",
+  "order": 9,
+  "summary": "A terminal-based simulation of multi-lane traffic with priority handling, manual and automated modes, CSV activity logs, and statistics such as vehicle counts, waiting times, and queue lengths.",
+  "stack": [
+    "cpp",
+    "codeblocks",
+    "vscode"
+  ],
+  "links": [],
+  "resume": "Terminal-based multi-lane traffic simulation with priority handling, manual and automated modes, CSV logs and statistics."
+}

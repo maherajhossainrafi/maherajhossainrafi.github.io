@@ -1,0 +1,96 @@
+{
+  "education": {
+    "degree": "B.Sc. in Computer Science and Engineering",
+    "institution": "IUBAT—International University of Business Agriculture and Technology",
+    "period": "Jan 2024 – Present",
+    "cgpa": "3.80",
+    "cgpaScale": "4.00"
+  },
+  "research": {
+    "status": "Research work is currently paused. Where each paper stands:",
+    "papers": [
+      {
+        "title": "Alzheimer's disease classification using deep learning",
+        "method": "Benchmarking 7 models on 1 dataset",
+        "status": "Paused"
+      },
+      {
+        "title": "IoT network intrusion detection using machine learning",
+        "method": "4 models on 2 datasets, with cross-validation",
+        "status": "Paused"
+      }
+    ],
+    "interests": [
+      "GenAI",
+      "XAI",
+      "Cybersecurity",
+      "Medical imaging",
+      "Image processing",
+      "NIDS",
+      "IoT",
+      "Benchmarking",
+      "Deep learning",
+      "Machine learning",
+      "Pattern recognition",
+      "Data science"
+    ]
+  },
+  "about": {
+    "paragraphs": [
+      "I'm a CSE undergraduate who learns by building and sharing. I have built web applications along with microcontroller and sensor-based projects, and I have used machine learning and deep learning models for classification and detection.",
+      "I choose tools to fit the problem and favor the simplest approach that works. I practice problem solving on LeetCode every day."
+    ],
+    "exploring": [
+      "AI",
+      "AI agents",
+      "System design",
+      "SaaS",
+      "Game development",
+      "Cloud & DevOps"
+    ],
+    "leetcode": "https://github.com/maherajhossainrafi/leetcode-solutions"
+  },
+  "summary": {
+    "iconRow": [
+      "cpp",
+      "csharp",
+      "php",
+      "javascript",
+      "python",
+      "react",
+      "django",
+      "tailwind",
+      "mysql",
+      "postgresql",
+      "esp",
+      "arduino"
+    ],
+    "counts": [
+      {
+        "label": "Languages",
+        "items": [
+          "c",
+          "cpp",
+          "csharp",
+          "php",
+          "javascript",
+          "python"
+        ]
+      },
+      {
+        "label": "Frameworks",
+        "items": [
+          "react",
+          "django"
+        ]
+      },
+      {
+        "label": "Databases",
+        "items": [
+          "mysql",
+          "postgresql"
+        ]
+      }
+    ]
+  }
+}

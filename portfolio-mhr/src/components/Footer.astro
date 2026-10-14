@@ -1,0 +1,37 @@
+---
+import site from '../data/site.json';
+import Brand from './Brand.astro';
+import Ui from './Ui.astro';
+const year = new Date().getFullYear();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const resume = `${base}/${site.resume.file}`;
+const nav = [['Projects', '#projects'], ['Skills', '#skills'], ['Education', '#education'], ['About', '#about'], ['Contact', '#contact']];
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div class="site-footer__about">
+        <p class="site-footer__name">{site.name}</p>
+        <p class="site-footer__role">{site.title} · {site.tagline}</p>
+        <p class="site-footer__loc"><Ui name="pin" />{site.location} ({site.utc})</p>
+      </div>
+      <nav class="site-footer__col" aria-label="Footer sections">
+        <h2 class="mono">Explore</h2>
+        <ul>{nav.map(([label, href]) => <li><a href={`${base}/${href}`}>{label}</a></li>)}</ul>
+      </nav>
+      <div class="site-footer__col">
+        <h2 class="mono">Connect</h2>
+        <ul>
+          <li><a href={`mailto:${site.email}`}><Ui name="mail" />Email</a></li>
+          <li><a href={site.github} rel="noopener noreferrer" target="_blank"><Brand name="siGithub" />GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          {site.linkedin && <li><a href={site.linkedin} rel="noopener noreferrer" target="_blank"><Brand name="siLinkedin" />LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>}
+          <li><a href={resume} download><Ui name="download" />Resume (PDF)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bar">
+      <p>© {year} {site.name}. All rights reserved.</p>
+      <a class="site-footer__top mono" href={`${base}/#top`}>Back to top ↑</a>
+    </div>
+  </div>
+</footer>

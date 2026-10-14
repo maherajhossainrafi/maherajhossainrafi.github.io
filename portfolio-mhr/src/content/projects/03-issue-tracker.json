@@ -1,0 +1,17 @@
+{
+  "name": "Issue Tracker",
+  "shortName": "Issue Tracker",
+  "category": "web",
+  "kind": "Web application",
+  "order": 3,
+  "summary": "A web app for reporting, categorizing, tracking, and resolving issues, bugs, and tasks by department, priority, status, and project.",
+  "stack": [
+    "html",
+    "css",
+    "php",
+    "mysql",
+    "xampp"
+  ],
+  "links": [],
+  "resume": "Web app for reporting, categorizing and resolving issues and tasks by department, priority, status and project."
+}

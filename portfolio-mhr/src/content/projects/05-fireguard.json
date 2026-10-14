@@ -1,0 +1,15 @@
+{
+  "name": "FireGuard: An Analog Gas / Smoke and Flame Detection System",
+  "shortName": "FireGuard",
+  "category": "embedded",
+  "kind": "Sensor-based system",
+  "order": 5,
+  "summary": "Detects gas, smoke, and flame and raises an alert through indicators when a hazard is sensed.",
+  "stack": [
+    "gas-sensor",
+    "flame-sensor",
+    "indicators"
+  ],
+  "links": [],
+  "resume": "Sensor-based hazard detection for gas, smoke and flame that raises alerts through indicators."
+}

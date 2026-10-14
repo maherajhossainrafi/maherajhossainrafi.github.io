@@ -1,0 +1,42 @@
+---
+import site from '../data/site.json';
+import Ui from './Ui.astro';
+import Brand from './Brand.astro';
+const resume = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${site.resume.file}`;
+---
+<section class="section contact-section" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <header class="section__head"><h2 id="contact-title">Contact</h2><p class="mono">{site.location} ({site.utc})</p></header>
+    <p class="contact__lead">Open to internships, projects and collaboration. Click the address in the terminal to write to me, or use the copy button.</p>
+
+    <div class="contact">
+      <figure class="terminal">
+        <div class="terminal__bar">
+          <span class="terminal__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <button class="icon-btn icon-btn--ghost" type="button" data-copy={site.email} aria-label="Copy email address">
+            <Ui name="copy" class="copy__idle" /><Ui name="check" class="copy__done" />
+          </button>
+        </div>
+        <pre class="terminal__body mono"><code><span class="t-arrow" aria-hidden="true">→</span> <span class="t-dir" aria-hidden="true">~</span> <span class="t-cmd">mailto</span> <a class="t-arg" href={`mailto:${site.email}`}>{site.email}</a>
+{`{`}
+  <span class="t-key">"status"</span>: <span class="t-val">"open_to_work"</span>,
+  <span class="t-key">"location"</span>: <span class="t-val">"{site.location} ({site.utc})"</span>,
+  <span class="t-key">"focus"</span>: [
+    <span class="t-val">"Software Engineering"</span>,
+    <span class="t-val">"Full-stack web"</span>,
+    <span class="t-val">"SaaS"</span>,
+    <span class="t-val">"AI"</span>,
+    <span class="t-val">"System Design"</span>
+  ]
+{`}`}</code></pre>
+        <p class="visually-hidden" role="status" aria-live="polite" data-copy-status></p>
+      </figure>
+    </div>
+
+    <div class="actions actions--contact">
+      <a class="btn btn--secondary" href={resume} download><Ui name="download" />{site.resume.label}</a>
+      <a class="btn btn--secondary" href={site.github} rel="noopener noreferrer" target="_blank"><Brand name="siGithub" />GitHub<span class="visually-hidden"> (opens in a new tab)</span></a>
+      {site.linkedin && <a class="btn btn--secondary" href={site.linkedin} rel="noopener noreferrer" target="_blank"><Brand name="siLinkedin" />LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a>}
+    </div>
+  </div>
+</section>

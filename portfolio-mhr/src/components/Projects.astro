@@ -1,0 +1,20 @@
+---
+import ProjectRow from './ProjectRow.astro';
+import { groupProjects, type Project } from '../lib/data';
+interface Props { projects: Project[] }
+const { projects } = Astro.props;
+const groups = groupProjects(projects);
+---
+<section class="section" id="projects" aria-labelledby="projects-title">
+  <div class="wrap">
+    <header class="section__head"><h2 id="projects-title">Projects</h2><p class="mono">{projects.length} projects · web, embedded, console</p></header>
+    {groups.map((g) => (
+      <div class="group">
+        <h3 class="group__title mono" data-cat={g.id}>{g.label}<span>{g.projects.length}</span></h3>
+        <ol class="projects tl">
+          {g.projects.map((p) => <ProjectRow project={p} index={projects.indexOf(p) + 1} />)}
+        </ol>
+      </div>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,18 @@
+{
+  "name": "RFID IoT Server-Based Attendance System (RISBAS)",
+  "shortName": "RISBAS",
+  "category": "embedded",
+  "kind": "Microcontroller + sensor system",
+  "order": 4,
+  "summary": "Records attendance when an NFC smart card is tapped on an RFID reader connected to an ESP microcontroller, with indicators for instant feedback.",
+  "stack": [
+    "arduino",
+    "esp",
+    "rfid",
+    "nfc",
+    "cpp",
+    "indicators"
+  ],
+  "links": [],
+  "resume": "Attendance recording from NFC card taps on an RFID reader wired to an ESP microcontroller, with indicator feedback."
+}
